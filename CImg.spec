@@ -1,12 +1,12 @@
 Summary:	C++ Template Image Processing Library
 Summary(pl):	Biblioteka szablonów C++ do przetwarzania obrazu
 Name:		CImg
-Version:	1.1.4
+Version:	1.1.6
 Release:	1
 License:	CeCILL Free Software License
 Group:		Development/Libraries
-Source0:	http://dl.sourceforge.net/cimg/%{name}-1-14.zip
-# Source0-md5:	70d01cb7b2e770c989af3f88b369d9ce
+Source0:	http://dl.sourceforge.net/cimg/%{name}-1-16.zip
+# Source0-md5:	4026b665a0c2d693d844b0f9f34a9f9d
 URL:		http://cimg.sourceforge.net/
 BuildRequires:	unzip
 Requires:	libstdc++-devel
@@ -31,21 +31,26 @@ Windows, MacOS X, FreeBSD...), wydajny, ³atwy w u¿yciu i przyjemny do
 kodowania przetwarzania obrazu w C++.
 
 %prep
-%setup -q -n %{name}-1-14
+%setup -q -n %{name}-1-16
+
+cp plugins/README.txt README-plugins.txt
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_includedir},%{_examplesdir}/%{name}-%{version}}
+install -d $RPM_BUILD_ROOT{%{_includedir}/%{name}/plugins,%{_examplesdir}/%{name}-%{version}}
 
-install CImg.h $RPM_BUILD_ROOT%{_includedir}
-install examples/{*.cpp,Makefile} $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+install CImg.h $RPM_BUILD_ROOT%{_includedir}/%{name}
+install plugins/*.h $RPM_BUILD_ROOT%{_includedir}/%{name}/plugins
+install examples/{*.cpp,*.m,Makefile} $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.txt LICENSE.txt README.txt
-%lang(fr) %doc LICENSE_FR.txt
-%{_includedir}/CImg.h
+%doc CHANGES.txt Licence* README*.txt documentation/*
+%dir %{_includedir}/%{name}
+%dir %{_includedir}/%{name}/plugins
+%{_includedir}/%{name}/CImg.h
+%{_includedir}/%{name}/plugins/*.h
 %{_examplesdir}/%{name}-%{version}
