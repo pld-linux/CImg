@@ -37,11 +37,12 @@ cp plugins/README.txt README-plugins.txt
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_includedir}/%{name}/plugins,%{_examplesdir}/%{name}-%{version}}
+install -d $RPM_BUILD_ROOT{%{_includedir}/%{name}/plugins,%{_examplesdir}/%{name}-%{version}/bmp}
 
 install CImg.h $RPM_BUILD_ROOT%{_includedir}/%{name}
 install plugins/*.h $RPM_BUILD_ROOT%{_includedir}/%{name}/plugins
 install examples/{*.cpp,*.m,Makefile} $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+install examples/bmp/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/bmp
 
 %clean
 rm -rf $RPM_BUILD_ROOT
