@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/cimg/%{name}-1-17.zip
 URL:		http://cimg.sourceforge.net/
 BuildRequires:	unzip
 Requires:	libstdc++-devel
-Requires:	xorg-lib-libX11-devel
+Requires:	X11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
