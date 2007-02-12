@@ -1,5 +1,5 @@
 Summary:	C++ Template Image Processing Library
-Summary(pl.UTF-8):   Biblioteka szablonów C++ do przetwarzania obrazu
+Summary(pl.UTF-8):	Biblioteka szablonów C++ do przetwarzania obrazu
 Name:		CImg
 Version:	1.1.7
 Release:	1
