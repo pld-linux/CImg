@@ -1,5 +1,5 @@
 Summary:	C++ Template Image Processing Library
-Summary(pl):	Biblioteka szablonÛw C++ do przetwarzania obrazu
+Summary(pl.UTF-8):   Biblioteka szablon√≥w C++ do przetwarzania obrazu
 Name:		CImg
 Version:	1.1.7
 Release:	1
@@ -21,13 +21,13 @@ load/save, process and display images. Very portable (Unix/X11,
 Windows, MacOS X, FreeBSD, ...), efficient, easy to use, it's a
 pleasant toolkit for coding image processing stuffs in C++.
 
-%description -l pl
-Biblioteka CImg to toolkit C++ o otwartych ºrÛd≥ach s≥uø±cy do
-przetwarzania obrazu. Sk≥ada siÍ z pojedynczego pliku nag≥Ûwkowego
-CImg.h udostÍpniaj±cego zbiÛr klas i funkcji C++, ktÛre moøna
-wykorzystaÊ we w≥asnych ºrÛd≥ach do wczytywania, zapisywania,
-przetwarzania i wy∂wietlania obrazÛw. Jest przeno∂ny (Unix/X11,
-Windows, MacOS X, FreeBSD...), wydajny, ≥atwy w uøyciu i przyjemny do
+%description -l pl.UTF-8
+Biblioteka CImg to toolkit C++ o otwartych ≈∫r√≥d≈Çach s≈Çu≈ºƒÖcy do
+przetwarzania obrazu. Sk≈Çada siƒô z pojedynczego pliku nag≈Ç√≥wkowego
+CImg.h udostƒôpniajƒÖcego zbi√≥r klas i funkcji C++, kt√≥re mo≈ºna
+wykorzystaƒá we w≈Çasnych ≈∫r√≥d≈Çach do wczytywania, zapisywania,
+przetwarzania i wy≈õwietlania obraz√≥w. Jest przeno≈õny (Unix/X11,
+Windows, MacOS X, FreeBSD...), wydajny, ≈Çatwy w u≈ºyciu i przyjemny do
 kodowania przetwarzania obrazu w C++.
 
 %prep
