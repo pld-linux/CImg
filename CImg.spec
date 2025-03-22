@@ -1,16 +1,15 @@
 Summary:	C++ Template Image Processing Library
 Summary(pl.UTF-8):	Biblioteka szablonów C++ do przetwarzania obrazu
 Name:		CImg
-Version:	1.7.9
+Version:	3.5.3
 Release:	1
-License:	CeCILL Free Software License
+License:	CeCILL-C v1 or CeCILL v2
 Group:		Development/Libraries
 Source0:	http://cimg.eu/files/%{name}_%{version}.zip
-# Source0-md5:	81c26cfd69624270ddf63b09e93e6783
+# Source0-md5:	b7e07db5ff0f3c02a2c50192982bc318
 URL:		http://cimg.eu/
 BuildRequires:	unzip
-Conflicts:	gcc-c++ < 4.0
-Requires:	libstdc++-devel
+Requires:	libstdc++-devel >= 6:4
 Requires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -48,9 +47,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Licence* README*.txt
+%doc Licence* README.txt
 %dir %{_includedir}/%{name}
-%dir %{_includedir}/%{name}/plugins
 %{_includedir}/%{name}/CImg.h
-%{_includedir}/%{name}/plugins/*.h
+%{_includedir}/%{name}/plugins
 %{_examplesdir}/%{name}-%{version}
